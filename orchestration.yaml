@@ -23,6 +23,9 @@ orchestration:
       - EnhancementAgent
       - CodeReviewer
     retention: persistent
+    sources:
+      - ./memory/persona.yaml
+      - ./memory/feedback.yaml
   logging:
     enabled: true
     agent: LoggingAgent
