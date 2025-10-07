@@ -1,1 +1,38 @@
-
+orchestration:
+  name: CSharpDevPipeline
+  description: Multi-agent orchestration for C# development using AutoGen Studio
+  entry_agent: Orchestrator
+  agents:
+    - Orchestrator
+    - CSharpDeveloper
+    - CodeReviewer
+    - UnitTester
+    - Validator
+    - EnhancementAgent
+    - GitOpsAgent
+    - Notifier
+    - LoggingAgent
+  group_chat:
+    name: CSharpDevGroup
+    max_rounds: 10
+    allow_partial_completion: true
+  memory:
+    enabled: true
+    scope: agent
+    agents:
+      - EnhancementAgent
+      - CodeReviewer
+    retention: persistent
+  logging:
+    enabled: true
+    agent: LoggingAgent
+  notifications:
+    enabled: true
+    agent: Notifier
+    channels:
+      - MicrosoftTeams
+  triggers:
+    on:
+      - feature_request
+      - bug_report
+      - refactor_request
