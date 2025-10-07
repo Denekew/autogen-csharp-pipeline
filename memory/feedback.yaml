@@ -1,1 +1,4 @@
-
+facts:
+  - "Avoid deeply nested loops in business logic."
+  - "Use async/await for I/O-bound operations."
+  - "Flag methods over 50 lines for modularization."
