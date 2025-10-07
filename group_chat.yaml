@@ -1,1 +1,14 @@
-
+group_chat:
+  name: CSharpDevPipeline
+  agents:
+    - Orchestrator
+    - CSharpDeveloper
+    - CodeReviewer
+    - UnitTester
+    - Validator
+    - EnhancementAgent
+    - GitOpsAgent
+    - Notifier
+    - LoggingAgent
+  max_rounds: 10
+  allow_partial_completion: true
